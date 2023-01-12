@@ -1,0 +1,516 @@
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    font-family: 'Poppins' , sans-serif;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    list-style: none ;
+    text-decoration: none ;
+    box-sizing: border-box ;
+
+}
+
+ /* CSS Variables */
+ 
+:root {
+    --main-color: #41caf8 ;
+    --main-color-dark : #136dfd ;
+    --text-color: #020102 ;
+    --bg-color: #fff ;
+    --tr-color: #f6f6f6 ;
+    
+}
+
+section {
+    padding: 4rem 0 2rem;
+}
+
+img{
+    
+    width: 100% ; 
+}
+
+body{
+    color: var(--text-color);
+    background-color: #eeeff1;
+}
+
+
+/* Header */
+
+.container {
+    max-width: 1100px ;
+    margin-left: auto ;
+    margin-right: auto;
+    
+}
+
+header {
+    width: 100% ;
+    position: fixed ;
+    top: 0;
+    left: 0;
+    z-index: 100 ;
+    background-color: #eeeff1;
+    
+}
+
+
+header.shadow{
+    background-color: var(--bg-color);
+    box-shadow: 2px 4px 4px silver ;
+    transition: 0.5s;
+}
+
+
+.nav{
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px ;
+    
+}
+
+
+.logo{
+    font-size: 1.2rem ;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.logo:hover{
+    color: var(--main-color);
+    transform: scale(1.1);
+    transition: 0.4s ;
+}
+
+.logo span{
+    color: var(--main-color);
+}
+
+.ul{
+    display: flex;
+    column-gap: 30px  ;
+}
+
+.ul a {
+    color: var(--text-color);
+    font-size: 17px  ;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.ul a:hover ,
+.ul .active
+{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+
+#search-icon {
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+#search-icon:hover {
+    color: var(--main-color);
+    transform: scale(1.2);
+    transition: 0.2s ;
+}
+
+.search-box {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    left: 0;
+    background: var(--bg-color);
+    box-shadow: 4px 4px 10px silver;
+    border: 2px solid var(--main-color);
+    border-radius: 20px;
+    display: none ;
+    
+}
+
+.search-box.active {
+    display: block;
+}
+
+
+.search-box input{
+    width: 100% ;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 18px ;
+}
+
+/* Header End */
+
+
+
+/* Home */
+
+.home{
+    max-width: 1600px ;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px ;
+    background: url(../images/Car_background_blue.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+.home-text {
+    padding-left: 130px ;
+    position: relative;
+}
+
+
+.car-icons {
+    width: 300px ;
+    height: 50px ;
+    position: absolute ;
+    top: 380px ;
+    left: 400px;
+    display: flex ;
+    justify-content: space-between ;
+}
+
+.car-icons img {
+    width: 90px ;
+    height: 60px ;
+}
+
+.car-icons img:hover {
+transform: scale(1.3);
+transition: 0.4s ;
+cursor: pointer;
+}
+
+.home-text h1 {
+    font-size: 2.4rem ;
+}
+
+.home-text span {
+    color: var(--main-color);
+}
+
+.home-text p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 0.5rem 0 1.5rem;
+}
+
+.btn{
+    padding: 10px 22px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 400;
+}
+
+.btn:hover {
+background-color: var(--main-color-dark);
+}
+
+
+
+/* Car section  */
+
+.heading{
+    text-align: center ;
+}
+
+.heading span{
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.heading p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+.cars-container{
+    display: flex;
+    flex-wrap: wrap ;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: center;
+    }
+
+
+
+.cars-container .box {
+    flex: 1 1 300px ;
+    position: relative;
+    height: 200px ;
+    border-radius: 0.5rem ;
+    overflow: hidden;
+}
+
+
+.cars-container .box img{
+    height: 100%; 
+
+
+}
+
+.cars-container .box img:hover {
+    transform: scale(1.1);
+    transition: 0.6s ;
+}
+
+.cars-container .box h2 {
+    position: absolute ;
+    bottom: 1rem;
+    left: 1rem ;
+    font-weight: 400;
+    font-size: 1rem ;
+    background-color: var(--bg-color) ;
+    padding: 8px;
+    border-radius: 0.5rem;
+}
+
+.cars-container .box h2:hover {
+    background-color: var(--main-color);
+    cursor: pointer ;
+}
+
+
+
+/* About */
+
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-img{
+    flex: 1 1 300px ;
+}
+
+.about-text{
+    flex: 1 1 300px;
+}
+
+.about-text span {
+    font-weight: 500 ;
+    color: var(--main-color);
+}
+
+.about-text h2 {
+    font-size: 1.7rem ;
+}
+
+.about-text p {
+    font-size: 0.9rem ;
+    margin: 0.5rem 0 1.5rem ;
+}
+
+
+/* Parts */
+
+.parts-container {
+    display: flex ;
+    flex-wrap: wrap ;
+    gap: 2rem ;
+    margin-top: 2rem ;
+}
+
+.parts-container .box {
+    flex: 1 1 300px;
+    position: relative ;
+    padding: 20px;
+    display: flex;
+    flex-direction: column ;
+    background-color: var(--tr-color) ;
+    border-radius: 0.5rem ;
+
+}
+
+.parts-container .box img {
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    
+}
+
+.parts-container .box h3 {
+    font-size: 1.1rem;
+    font-weight: 600 ;
+}
+
+.parts-container .box span {
+    font-size: 1.1rem;
+    font-weight: 600 ;
+    color: var(--main-color);
+}
+
+
+.parts-container .box .bx {
+    color: var(--main-color);
+    margin: 0.8rem 0 ;
+    
+}
+
+
+.parts-container .box .btn {
+    width: 120px ;
+}
+
+
+.parts-container .box .details {
+position: absolute;
+bottom: 1.8rem ;
+right: 1rem;
+font-size: 1rem;
+color: var(--text-color);
+}
+
+.parts-container .box .details:hover {
+    color: var(--main-color);
+    text-decoration: underline ;
+}
+
+
+
+/* Blog */
+
+.blog-container{
+    
+    display: flex ;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem ;
+
+}
+
+.blog-container .box{
+    flex: 1 1 300px ;
+    padding: 20px ;
+
+}
+
+.blog-container .box:hover {
+    background-color : var(--tr-color);
+}
+
+.blog-container .box span {
+    font-size: 0.8rem ;
+    color: var(--main-color);
+
+}
+
+.blog-container h3 {
+    font-size: 1.2rem ;
+}
+
+.blog-container .box p {
+    font-size: 0.9rem ;
+    margin: 4px ;
+    
+}
+
+.blog-container .box .blog-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 4px ;
+    color: var(--text-color);
+}
+
+.blog-container .box .blog-btn .bx{
+    font-size: 20px ;
+
+}
+
+.blog-container .box .blog-btn:hover{
+    color: var(--main-color);
+    column-gap: 12px ;
+    transition: 0.4s ;
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: var(--text-color);
+    color: var(--tr-color) ;
+    box-shadow: 0px -2px 10px #41caf8;
+    
+}
+
+.footer-container {
+    display: flex ;
+    justify-content: space-between;
+    gap: 1rem ;
+
+}
+
+.footer-container .logo{
+    color: var(--bg-color);
+    margin-bottom: 1rem ;
+
+}
+
+.footer-container .footer-box {
+    display: flex ;
+    flex-direction: column ;
+    
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social a{
+    font-size: 24px ;
+    margin-right: 1rem ;
+
+}
+
+.social a:hover {
+    color: var(--main-color);
+}
+
+.footer-box h3 {
+    font-size: 1.1rem ;
+    font-weight: 400 ;
+    margin-bottom: 1rem ;
+
+}
+
+
+.footer-box a {
+    color: #818181 ;
+    margin-bottom: 10px ;
+}
+
+
+.footer-box a:hover  {
+    color: var(--main-color) ;
+    cursor: pointer;
+}
+
+.copyright {
+    padding: 20px ;
+    text-align: center ;
+    color: var(--bg-color) ;
+    background-color: var(--text-color) ;
+}
+
+
